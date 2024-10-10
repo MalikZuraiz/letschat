@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "331865106883",
+    "project_id": "chatapp-aa23b",
+    "storage_bucket": "chatapp-aa23b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331865106883:android:b466b1022edf59e5e87576",
+        "android_client_info": {
+          "package_name": "com.example.letschat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi1EHPFVwiaLOGNx2MeJJ01XFvnHkXmvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

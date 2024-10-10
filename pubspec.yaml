@@ -1,0 +1,23 @@
+name: letschat
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+  firebase_core: 
+  cloud_firestore: ^5.4.4
+  firebase_auth: ^5.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
