@@ -10,6 +10,8 @@ abstract class Routes {
   static const CHAT_TAB = _Paths.CHAT_TAB;
   static const SHORTS_TAB = _Paths.SHORTS_TAB;
   static const PROFILE_TAB = _Paths.PROFILE_TAB;
+  static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
+  static const CREATE_NEW_PASSWORD = _Paths.CREATE_NEW_PASSWORD;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const CHAT_TAB = '/chat-tab';
   static const SHORTS_TAB = '/shorts-tab';
   static const PROFILE_TAB = '/profile-tab';
+  static const FORGOT_PASSWORD = '/forgot-password';
+  static const CREATE_NEW_PASSWORD = '/create-new-password';
 }

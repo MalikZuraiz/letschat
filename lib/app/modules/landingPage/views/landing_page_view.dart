@@ -7,9 +7,6 @@ import 'package:letschat/app/modules/chatTab/views/chat_tab_view.dart';
 import 'package:letschat/app/modules/shortsTab/views/shorts_tab_view.dart';
 import 'package:letschat/app/modules/profileTab/views/profile_tab_view.dart';
 
-// import '../views/shorts_tab.dart';
-// import '../views/profile_tab.dart';
-
 class LandingPageView extends GetView<LandingPageController> {
   const LandingPageView({super.key});
 
@@ -23,15 +20,15 @@ class LandingPageView extends GetView<LandingPageController> {
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
-              Tab(icon: Icon(Icons.chat), text: 'Chat'),
-              Tab(icon: Icon(Icons.video_library), text: 'Shorts'),
-              Tab(icon: Icon(Icons.person), text: 'Profile'),
+              Tab(icon: Icon(Icons.chat)),
+              Tab(icon: Icon(Icons.video_library)),
+              Tab(icon: Icon(Icons.person)),
             ],
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
-            const ChatTabView(),  // Reference to ChatTab
+            ChatTabView(),  // Reference to ChatTab
             ShortsTabView(),  // Reference to ShortsTab
             ProfileTabView(),  // Reference to ProfileTab
           ],

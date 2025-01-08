@@ -9,11 +9,14 @@ class SignInController extends GetxController {
   // Controllers for text fields
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  var isLoading = false.obs; // Observable to track loading state
 
   // Method to handle login
   Future<void> login() async {
     String email = emailController.text.trim();
     String password = passwordController.text.trim();
+    isLoading.value = true; // Set loading state to true
+
 
     if (email.isEmpty || password.isEmpty) {
       Get.snackbar('Error', 'Email and password are required');
@@ -25,10 +28,13 @@ class SignInController extends GetxController {
       if (user != null) {
         Get.snackbar('Success', 'Logged in successfully');
         Get.offAllNamed(
-            Routes.LANDING_PAGE); // Redirect to home page after successful login
+            Routes.LANDING_PAGE); 
       }
     } catch (e) {
-      Get.snackbar('Error', 'Failed to log in. Please try again.');
+      // Handle sign-in error
+      Get.snackbar('Error', 'Login failed: $e');
+    } finally {
+      isLoading.value = false; // Set loading state to false
     }
   }
 

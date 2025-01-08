@@ -1,5 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/create_new_password/bindings/create_new_password_binding.dart';
+import '../modules/create_new_password/views/create_new_password_view.dart';
+import '../modules/forgot_password/bindings/forgot_password_binding.dart';
+import '../modules/forgot_password/views/forgot_password_view.dart';
 import '../modules/landingPage/bindings/landing_page_binding.dart';
 import '../modules/landingPage/views/landing_page_view.dart';
 import '../modules/profileTab/bindings/profile_tab_binding.dart';
@@ -18,7 +22,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SIGN_UP;
+  static const INITIAL = Routes.SIGN_IN;
 
   static final routes = [
     GetPage(
@@ -50,6 +54,16 @@ class AppPages {
       name: _Paths.PROFILE_TAB,
       page: () => const ProfileTabView(),
       binding: ProfileTabBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORGOT_PASSWORD,
+      page: () => const ForgotPasswordView(),
+      binding: ForgotPasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.CREATE_NEW_PASSWORD,
+      page: () => CreateNewPasswordView(),
+      binding: CreateNewPasswordBinding(),
     ),
   ];
 }

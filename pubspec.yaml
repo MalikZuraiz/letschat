@@ -13,6 +13,9 @@ dependencies:
   firebase_core: 
   cloud_firestore: ^5.4.4
   firebase_auth: ^5.3.1
+  image_picker: ^1.1.2
+  firebase_storage:
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +24,33 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    # - assets/icon/
+    - assets/fonts/
+    - assets/images/
+
+  fonts:
+    - family: ProductSans
+      fonts:
+        - asset: assets/fonts/ProductSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/ProductSans-Medium.ttf
+          weight: 500    
+        - asset: assets/fonts/ProductSans-Bold.ttf
+          weight: 700       
+        - asset: assets/fonts/ProductSans-Light.ttf
+          weight: 300
+        - asset: assets/fonts/ProductSans-Thin.ttf
+          weight: 100
+
+
+    - family: Altoysitalicpersonalonly
+      fonts:
+        - asset: assets/fonts/Altoysitalicpersonalonly.ttf
+
+    - family: DINNextLTPro
+      fonts:
+        - asset: assets/fonts/DINNextLTPro-Medium.ttf
+          weight: 500
+

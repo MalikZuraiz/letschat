@@ -8,11 +8,11 @@ class UserService extends BaseService<UserModel> {
       : super(
           ref: FirebaseFirestore.instance
               .collection(CollectionKey.USERS)
-              .withConverter<UserModel>(
-                fromFirestore: (snapshot, _) =>
-                    UserModel.fromFirestore(snapshot),
-                toFirestore: (user, _) => user.toMap(),
+              .withConverter<Map<String, dynamic>>(
+                fromFirestore: (snapshot, _) => snapshot.data() ?? {},
+                toFirestore: (data, _) => data,
               ),
+          fromDocument: (doc) => UserModel.fromDocument(doc),
         );
 
   // Create user in Firestore
